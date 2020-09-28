@@ -1,0 +1,25 @@
+﻿<Page x:Class="AlgoritmApp.PageResults"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AlgoritmApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="380" d:DesignWidth="650"
+      Title="PageResults">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="313*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20" FontSize="20">Результаты за последний сеанс</TextBlock>
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ColumnWidth="*" Grid.Row="1" Name="grid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Score}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button FontSize="15"  HorizontalAlignment="Right" VerticalAlignment="Center" Width="80" Height="30"  Name="BtnBack" Margin="10" Click="BtnBack_Click"  >Назад</Button>
+    </Grid>
+</Page>
